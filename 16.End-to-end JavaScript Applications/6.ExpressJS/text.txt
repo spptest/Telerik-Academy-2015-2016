@@ -1,0 +1,9 @@
+za ne resvame servera vseki pyt kogato napravim promqna po koda
+	nodemon sam si sledi za faila dali e promemen i ako e resva servera
+npm install nodemon -g
+nodemon app.js
+-----------
+work around ako ne raboti
+npm install nodemon
+node node_modules/nodemon/bin/nodemon.js app.js
+----------

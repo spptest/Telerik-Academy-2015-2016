@@ -1,0 +1,34 @@
+NPM
+npm init - initcializira proekt v nashata direktoriq
+npm install - gleda dependencitata definirani v package.json i gi instalira (dev + prod dependencies)
+npm install express
+npm install express --save / --save-dev
+npm install jade@1 - versiq 1 
+npm uninstall
+npm install -g bower
+where bower
+
+* - vse mi e taq
+^ - po -golqm ot tova
+~ - nai blizko do
+
+
+BOWER
+bower install htt://www.... --save	- pri node tova go nqma
+bower-a ima skrit fail kydeto moje da slagame dopylnitelni nastroiki
+
+
+Yeoman
+npm paket koito ni dava dopylnitelna funkcionalnost
+	new project i pravi sumati failove
+	project scafolding - gotovi neshta nad koito mojem da nadgrajdame (neshta kato template)
+	dava ni gotova arhitektura, koqto mojem da izpolzvame
+npm install -g yo
+yo express		-> imeto na generatora
+
+
+
+
+Build tools
+Gulp
+Grunt
