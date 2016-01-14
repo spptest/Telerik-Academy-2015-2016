@@ -1,6 +1,6 @@
 var express = require('express'),
     path = require('path'),
-    ROUTER_NAME = 'user';
+    ROUTER_NAME = '/user';
 
 var init = function (app, appParams) {
     var userController = require(path.normalize(appParams.controllerPath + '/users-controller'))(appParams),
