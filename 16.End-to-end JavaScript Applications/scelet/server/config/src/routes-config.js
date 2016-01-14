@@ -25,9 +25,7 @@ module.exports = function(app, appParams, config) {
         app.get('/register', controllers.users.getRegister);
         app.post('/register', controllers.users.postRegister);
 
-        app.get('/admin', authService.isAuthenticated, function (req, res) {
-            res.send('a');
-        });
+        app.get('/admin', authService.isAuthenticated, function (req, res) { res.send('a'); });
 
         app.get('/login', controllers.users.getLogin);
         app.post('/login', controllers.users.login);

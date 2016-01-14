@@ -50,7 +50,8 @@ module.exports.init = function (appParams) {
         firstName: { type: String, required: requiredMessage},
         lastName: { type: String, required: requiredMessage},
         email: { type: String, required: requiredMessage},
-        avatar: { type: String, default: defaultAvatar }
+        avatar: { type: String, default: defaultAvatar },
+        dateRegistered: { type: Date, default: Date.now }
     });
 
     userSchema.method({
