@@ -11,35 +11,29 @@ module.exports = {
     loadConfiguration: function(app, appParams, config) {
         var logger = require(appParams.loggerPath)(appParams);
 
-        fs.readdir(__dirname + '/src', function (err, files) {
-            if (err)
-            {
-                throw err;
-            }
+        var files = fs.readdirSync(__dirname + '/src');
+        files
+            .filter(function (file) {
+                return file.indexOf('-config') >= 0
+            })
+            .sort(function (file1, file2) {
+                var hasCustomOrderingOption1 = file1.split('-config-'),
+                    hasCustomOrderingOption2 = file2.split('-config-');
 
-            files
-                .filter(function (file) {
-                    return file.indexOf('-config') >= 0
-                })
-                .sort(function (file1, file2) {
-                    var hasCustomOrderingOption1 = file1.split('-config-'),
-                        hasCustomOrderingOption2 = file2.split('-config-');
+                if (!hasCustomOrderingOption1[1]) {
+                    return true;
+                } else if (!hasCustomOrderingOption2[1]) {
+                    return false;
+                } else {
+                    var file1Number = hasCustomOrderingOption1[1].split('.js')[0] | 0,
+                        file2Number = hasCustomOrderingOption2[1].split('.js')[0] | 0;
 
-                    if (!hasCustomOrderingOption1[1]) {
-                        return true;
-                    } else if (!hasCustomOrderingOption2[1]) {
-                        return false;
-                    } else {
-                        var file1Number = hasCustomOrderingOption1[1].split('.js')[0] | 0,
-                            file2Number = hasCustomOrderingOption2[1].split('.js')[0] | 0;
-
-                        return file1Number > file2Number;
-                    }
-                })
-                .forEach(function (file) {
-                    logger.debug('Loading configuration ' + file);
-                    require('./src/' + file)(app, appParams, config);
-                });
-        })
+                    return file1Number > file2Number;
+                }
+            })
+            .forEach(function (file) {
+                logger.debug('Loading configuration ' + file);
+                require('./src/' + file)(app, appParams, config);
+            });
     }
 };

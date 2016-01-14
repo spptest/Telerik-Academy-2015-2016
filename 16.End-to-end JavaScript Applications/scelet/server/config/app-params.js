@@ -10,6 +10,7 @@ module.exports = function (config) {
         encryptionUtilPath: path.normalize(config.rootPath + '/server/common/utilities/encryption.js'),
         controllerPath: path.normalize(config.rootPath + '/server/controllers'),
         viewsPath: path.normalize(config.rootPath + '/server/views'),
+        routesPath: path.normalize(config.rootPath + '/server/routes'),
         servicesPath: path.normalize(config.rootPath + '/server/data/services'),
         authServicePath: path.join(config.rootPath, 'server', 'data', 'services', 'auth-service.js'),
         showDebugMessages: config.showDebugMessages,

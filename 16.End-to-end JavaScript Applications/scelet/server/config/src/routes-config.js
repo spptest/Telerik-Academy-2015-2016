@@ -6,30 +6,20 @@ module.exports = function(app, appParams, config) {
      * Load configuration
      * Looks up for files in ./server/controllers folder and loads each file with '-controller' in its name
      */
-    var authService = require(appParams.authServicePath),
-        controllers = {},
-        currentController,
-        currentControllerName;
+    var logger = require(appParams.loggerPath)(appParams),
+        authService = require(appParams.authServicePath);
 
-    var files = fs.readdirSync(appParams.controllerPath);
+    var files = fs.readdirSync(appParams.routesPath);
     files
         .filter(function (file) {
-            return file.indexOf('controller') >= 0;
+            return file.indexOf('-router') >= 0;
         })
         .forEach(function (file) {
-            currentController = require(path.normalize(appParams.controllerPath) + '/' + file)(appParams);
-            currentControllerName = file.split('-controller')[0];
-            controllers[currentControllerName] = currentController;
+            logger.debug('Loading route ' + file);
+            require(path.normalize(appParams.routesPath + '/' + file)).init(app, appParams);
         });
 
-    app.get('/register', controllers.users.getRegister);
-    app.post('/register', controllers.users.postRegister);
-
-    app.get('/admin', authService.isAuthenticated, function (req, res) { res.send('a'); });
-
-    app.get('/login', controllers.users.getLogin);
-    app.post('/login', controllers.users.login);
-    app.get('/logout', controllers.users.logout);
+    //app.get('/admin', authService.isAuthenticated, function (req, res) { res.send('a'); });
 
     app.get('/', function(req, res) {
         res.render('index');
@@ -39,6 +29,5 @@ module.exports = function(app, appParams, config) {
         res.redirect('/');
     });
 
-    var logger = require(appParams.loggerPath)(appParams);
     logger.debug('Routes configured.');
 };
