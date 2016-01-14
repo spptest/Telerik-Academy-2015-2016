@@ -1,4 +1,4 @@
-var logger = function() {
+var logger = function(appParams) {
 
     function log(message, notifyUser) {
         notifyUser = notifyUser | false;
@@ -30,11 +30,22 @@ var logger = function() {
         }
     }
 
+    function debug(message) {
+        if (appParams && appParams.showDebugMessages) {
+            if (message[message.length-1] != '.') {
+                message += '.';
+            }
+
+            console.log('~~~~~~~~    ' + message + '    ~~~~~~~~');
+        }
+    }
+
     return {
         log: log,
         warn: warn,
-        error: error
+        error: error,
+        debug: debug
     }
-}();
+};
 
 module.exports = logger;

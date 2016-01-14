@@ -5,11 +5,13 @@ module.exports = {
     development: {
         rootPath: rootPath,
         db: 'mongodb://localhost:27017/testsystem',
-        port: process.env.PORT || 1234
+        port: process.env.PORT || 1234,
+        showDebugMessages: true
     },
     production: {
         rootPath: rootPath,
         db: 'mongodb://admin:dsadsadsadsadsadsadsaewerwewtewfdfsgfsdfdsfefdsgfdhtrytett@ds027328.mongolab.com:27328/DB_NAME',
-        port: process.env.PORT || 3030
+        port: process.env.PORT || 3030,
+        showDebugMessages: false
     }
 };

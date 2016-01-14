@@ -3,7 +3,8 @@ var passport = require('passport'),
     User = require('mongoose').model('User');
 
 module.exports = function(app, appParams, config) {
-    var logger = require(appParams.loggerPath);
+    var logger = require(appParams.loggerPath)();
+    logger.debug('Configure passport...');
 
     passport.use(new LocalPassport(function(username, password, done) {
         User.findOne({ username: username }).exec(function(err, user) {

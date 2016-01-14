@@ -5,10 +5,10 @@ var express = require('express'),
     config = require('./server/config/config')[env],
     appParams = require('./server/config/app-params.js')(config),
     configLoader = require('./server/config/config-loader.js'),
-    logger = require(appParams.loggerPath);
+    logger = require(appParams.loggerPath)(appParams);
 
 var app = express();
 configLoader.loadConfiguration(app, appParams, config);
 
 app.listen(config.port);
-logger.log('Server is ruung on port: ' + config.port + '...');
+logger.log('Server is running on port: ' + config.port + '...');

@@ -12,6 +12,7 @@ module.exports = function (config) {
         viewsPath: path.normalize(config.rootPath + '/server/views'),
         servicesPath: path.normalize(config.rootPath + '/server/data/services'),
         authServicePath: path.join(config.rootPath, 'server', 'data', 'services', 'auth-service.js'),
+        showDebugMessages: config.showDebugMessages,
 
         siteTitle: 'My site title'
     }

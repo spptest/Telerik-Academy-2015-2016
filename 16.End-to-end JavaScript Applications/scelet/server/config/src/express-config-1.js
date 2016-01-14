@@ -38,6 +38,9 @@ function loadCustomViewLocals(app, appParams) {
 }
 
 module.exports = function (app, appParams, config) {
+    var logger = require(appParams.loggerPath)(appParams);
+    logger.debug('Setting app middleware and view engine.');
+
     app
         .set('views', path.normalize(appParams.viewsPath))
         .set('view engine', 'jade')

@@ -5,7 +5,7 @@ var CONTROLLER_NAME = 'users';
 module.exports = function (appParams) {
     var userService = require(appParams.servicesPath + '/user-service'),
         encryption = require(appParams.encryptionUtilPath),
-        logger = require(appParams.loggerPath);
+        logger = require(appParams.loggerPath)(appParams);
 
     function getRegister(req, res) {
         res.render(CONTROLLER_NAME + '/register')

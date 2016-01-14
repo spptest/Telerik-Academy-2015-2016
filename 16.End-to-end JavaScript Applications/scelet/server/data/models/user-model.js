@@ -38,7 +38,7 @@ function seedInitialUsers () {
 
 module.exports.init = function (appParams) {
     encryption = require(appParams.encryptionUtilPath);
-    logger = require(appParams.loggerPath);
+    logger = require(appParams.loggerPath)();
 
     var requiredMessage = '{PATH} is required';
     var defaultAvatar = 'http://s3.amazonaws.com/37assets/svn/765-default-avatar.png';

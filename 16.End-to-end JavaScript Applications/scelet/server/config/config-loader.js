@@ -9,6 +9,8 @@ module.exports = {
      *      this file will be first loaded
      */
     loadConfiguration: function(app, appParams, config) {
+        var logger = require(appParams.loggerPath)(appParams);
+
         fs.readdir(__dirname + '/src', function (err, files) {
             if (err)
             {
@@ -35,6 +37,7 @@ module.exports = {
                     }
                 })
                 .forEach(function (file) {
+                    logger.debug('Loading configuration ' + file);
                     require('./src/' + file)(app, appParams, config);
                 });
         })
