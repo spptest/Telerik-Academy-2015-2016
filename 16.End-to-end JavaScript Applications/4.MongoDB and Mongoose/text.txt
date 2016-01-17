@@ -1,0 +1,26 @@
+mongodb as windows service (installation)
+Task Manager
+localhost:27017
+
+umongo (client)
+mongoVUE
+
+
+=====================
+MEAN Stack WORKSHOP 10hours
+https://www.youtube.com/watch?v=UtyqvBcwE-8&list=PLF4lVL1sPDSkhK8mMtrUg1A4CHllt5jh_&index=1
+=====================
+
+==================
+My steps for installing as windows service
+==================
+1) Create folder in installation folder (C:\Program Files\MongoDB\Server\3.2) "data" and two folder inside "db" and "log" + file mongod.cfg
+2) file "mongod.cfg"
+systemLog:
+    destination: file
+    path: "C:\\Program Files\\MongoDB\\Server\\3.2\\data\\log\\mongod.log"
+storage:
+    dbPath: "C:\\Program Files\\MongoDB\\Server\\3.2\\data\\db"
+3) sc.exe create MongoDB binPath= "C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe --service --config=\"C:\Program Files\MongoDB\Server\3.2\data\mongod.cfg\"" DisplayName= "MongoDB"
+
+for help (https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/)
