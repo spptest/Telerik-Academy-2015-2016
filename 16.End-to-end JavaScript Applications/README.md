@@ -1,3 +1,5 @@
+Repository for the End-to-end JavaScript Applications (Node.js, MEAN) course 
+
 # Курс „End-to-end JavaScript приложения“ #
 Курсът цели да ви запознае с разработката на End-to-end JS приложения върху платформата Node.js. По време на обучението ще разберете как да създадете базов сървър с Node.js, ще се научите да работите с нерелационни бази данни, MongoDB и Mongoose  (улеснен вариант на MongoDB в JavaScript) и ще се запознаете с Express - MVC решение за Node.js, улесняващо използването на платформата .
 
