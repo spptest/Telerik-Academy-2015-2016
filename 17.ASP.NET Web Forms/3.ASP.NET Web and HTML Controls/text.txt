@@ -1,0 +1,3 @@
+onclick - click koito shte se izpylni na klienta
+onserverclick - event koito shte se izpylni chak kogao stranicata sstigne obratno do syrvera s postback
+

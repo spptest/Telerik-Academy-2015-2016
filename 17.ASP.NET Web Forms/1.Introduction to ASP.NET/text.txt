@@ -1,0 +1,7 @@
+ASP.NET 4.6
+
+OSI MODEL
+
+
+port 80 - http
+port 443 - https

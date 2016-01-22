@@ -1,0 +1,3 @@
+samo kogato e runatserver
+samo togava imame dostyp do tova pole v code behinda
+inache bez runat server si izliza kato chist html 
