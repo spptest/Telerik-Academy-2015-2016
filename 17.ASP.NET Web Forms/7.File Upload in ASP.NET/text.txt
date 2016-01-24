@@ -1,0 +1,1 @@
+imageprocessing .net  -> dobra biblioteka za obrabotka na image

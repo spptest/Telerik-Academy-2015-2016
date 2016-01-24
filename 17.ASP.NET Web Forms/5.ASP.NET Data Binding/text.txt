@@ -1,0 +1,5 @@
+GridView
+DataGridView - staroto, ne go izpolzvaite
+
+
+DetailsView - Edin item edin po edin
