@@ -1,0 +1,4 @@
+http://techbrij.com/notes/aspnet-mvc-4.php
+http://telerikacademy.com/Forum/Questions/185541/Cheat-sheet-MVC-Related-Annotations-Filters-HtmlHelpers-ActionResults
+
+https://www.youtube.com/results?search_query=fiddler+telerik

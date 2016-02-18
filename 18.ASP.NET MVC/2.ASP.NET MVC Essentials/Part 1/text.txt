@@ -1,0 +1,1 @@
+Routing mehanizma - priema zaqvakata i vyz osnova na url izbira koi controller koi method i kakvi paraemtri da mu podade

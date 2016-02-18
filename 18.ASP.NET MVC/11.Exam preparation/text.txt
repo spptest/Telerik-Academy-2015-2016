@@ -1,0 +1,32 @@
+modeli
+seed method
+pagination
+kendo grid
+Unit testing
+Filtri (kakvo e filty, kak se pravi filtyr)
+
+
+
+Kendo
+Create -> Create, saveid, GetIT and project it 
+Same with Update
+
+
+Kendo UI Scaffolder
+
+
+
+
+
+gist.github.com/NikolayIT
+
+Seed database (categories)
+Navigacionnite propirtite minav prez oshte edin model (Image1)
+ViewBag.Title on each page
+
+
+sanitize htnl - HtmlSanitizer (NugetPacket), 1:21:30 (Image 2)
+
+
+
+js which if faster selector by id or by data-attribute

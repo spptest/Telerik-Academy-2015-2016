@@ -1,0 +1,21 @@
+Random in linq
+jokeRepos.All().OrderBy(x => Guid.NewGuid()).Take(3)
+
+
+Anglesharp v0.9.4
+
+
+nunit 
+to run nunit test we need to instal
+ Tool > Extensions and Updates -- nunit > NUnit Test Adapter (raboti s version do 2.6.4)
+
+MvcRouteTester.MVC5 + NUnit
+
+appveyor - momenta v koito pushna neshto v github svalq koda i puska build
+	kato si go dobavim, vajno neshto e v setting > Build > Before build script: CMD (nuget restore Source/MvcTemplate/sln)
+										imeto na solution failva
+moje da si slojim i Badges -> Settins > Badges
+copy paste Sample markdown code v README.md
+
+Test na controllerite
+	NUnit + TestStack.FluentMVCTesting - bez .3 ,.2 si e za version 5

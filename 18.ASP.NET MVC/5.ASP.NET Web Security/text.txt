@@ -1,0 +1,2 @@
+SQL Map tool za generirane na zaqvki - davash mu samo kydeto e schupen saita (kydeto e SELECT FROM... WHERE =' + string + '..) 
+i si generira razni sql zaqvki
